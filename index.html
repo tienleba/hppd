@@ -90,7 +90,11 @@
                             <img src="./publics/images/pl1.jpg" alt="" width="50%">
                         </div>
                          <div class="imageCute3">
-                            <img src="./publics/images/pl4.jpg" alt="" width="100%">
+                            <img
+                                    id="cuteSlide"
+                                    src="./publics/images/pl1.jpg"
+                                    alt="Cute Pig"
+                                >
                          </div>
                     </div>
                 </div>
@@ -134,5 +138,34 @@
         close.addEventListener('click', function(){
             boxmail.classList.remove('active')
         })
+
+          const images = [
+        "./publics/images/pl1.jpg",
+        "./publics/images/pl.jpg",
+        "./publics/images/pl3.jpg",
+        "./publics/images/pl4.jpg",
+        "./publics/images/pl5.jpg"
+    ];
+
+    let currentIndex = 0;
+
+    const slideImage = document.getElementById("cuteSlide");
+
+    setInterval(function () {
+        slideImage.style.opacity = "0";
+
+        setTimeout(function () {
+            currentIndex++;
+
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+
+            slideImage.src = images[currentIndex];
+
+            slideImage.style.opacity = "1";
+        }, 500);
+
+    }, 3000);
     </script>
 </html>

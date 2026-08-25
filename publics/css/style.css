@@ -1357,3 +1357,15 @@ span::before{
 
     }
 }
+
+ .imageCute3 {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .imageCute3 img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: opacity 0.5s ease-in-out;
+    }

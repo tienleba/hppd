@@ -1,171 +1,559 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./publics/css/style.css">
-    <link rel="shortcut icon" href="./publics/images/pl4.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>happy Birthday Uyển Đan</title>
-</head>
-<body>
-    <div class="container">
-        <div class="boxcontainer">
-            <div class="image">
-                <img src="./publics/images/lag.png" alt="">
-            </div>
-            <div class="text-happybirthday">
-                <img src="./publics/images/texthappy.png" alt="">
-            </div>
-            <div class="cake">
-                <img src="./publics/images/cake.png" alt="">
-            </div>
-            <div class="box-balloon">
-                <div class="balloon-item1">
-                    <img src="./publics/images/balloon.png" alt="">
-                </div>
-                <div class="balloon-item1">
-                    <img src="./publics/images/balloon.png" alt="">
-                </div>
-            </div>
-            <div class="box-cloud">
-                <div class="cloud">
-                    <img src="./publics/images/cloud.png" alt="">
-                </div>
-                <div class="cloud">
-                    <img src="./publics/images/cloud.png" alt="">
-                </div>
-            </div>
-            <div class="box-firework">
-                <div class="firework">
-                    <img src="./publics/images/firework.png" alt="">
-                    <img src="./publics/images/firework1.png" alt="" id="firework1">
-                </div>
-                <div class="firework">
-                    <img src="./publics/images/firework.png" alt="">
-                    <img src="./publics/images/firework1.png" alt="" id="firework1">
-                </div>
-            </div>
-            <div class="paperCannons">
-                <img src="./publics/images/paperCannons1.png" alt="">
-            </div>
-            <div class="box-giftbox">
-                <img src="./publics/images/giftbox.png" alt="">
-                <img src="./publics/images/giftbox.png" alt="">
-                <img src="./publics/images/giftbox.png" alt="">
-                <img src="./publics/images/giftbox.png" alt="">
-                <img src="./publics/images/giftbox.png" alt="">
-                <img src="./publics/images/giftbox.png" alt="">
-            </div>
-            <div class="mail">
-                <i class="fa-regular fa-envelope"></i>
-            </div>
-            <div class="boxcute">
-                <div class="cute1">
-                    <img src="./publics/images/cute.png" alt="">
-                </div>
-                <div class="cute2">
-                    <img src="./publics/images/cute.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="boxMail">
-            <i class="fa-solid fa-xmark"></i>
-            <div class="boxMail-container">
-                <div class="card1">
-                    <div class="userImg">
-                        <img src="./publics/images/pl2.jpg" alt="">
-                    </div>
-                    <h3>Happy birthday</h3>
-                    <div class="imageCute" style="text-align: center;">
-                        <img src="./publics/images/cute1.png" alt="" width="25%">
-                    </div>
-                </div>
-                <div class="card2">
-                    <div class="card2-content">
-                        <h3>Chúc mừng sinh nhật Uyển Đan 🩷</h3>
-                        <h2>Chúc ngoan xinh iuu luôn vui vẻ , xinh đẹp và sớm thực hiện được ước mơ của mình nhaaa. Yeuu em 💖 </h2>
-                        <div class="imageCute2">
-                            <img src="./publics/images/pl1.jpg" alt="" width="50%">
-                        </div>
-                         <div class="imageCute3">
-                            <img
-                                    id="cuteSlide"
-                                    src="./publics/images/pl1.jpg"
-                                    alt="Cute Pig"
-                                >
-                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-    <script>
-        document.addEventListener('mousemove', function(e){
-            let body = document.querySelector('body');
-            let heart = document.createElement('span');
-            let x = e.offsetX;
-            let y = e.offsetY;
-            heart.style.left = x+'px';
-            heart.style.top = y+'px';
 
-            let size = Math.random() * 10;
-            heart.style.width = 4 * size+'px';
-            heart.style.height = 4 * size+'px';
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
+    <title>Happy Birthday Uyển Đan 💗</title>
 
-            let transformValue = Math.random() * 360;
-            heart.style.transform = 'rotate('+ transformValue +'deg)';
-
-            body.appendChild(heart);
-
-            setTimeout(function(){
-                heart.remove();
-            },1000)
-        })
-
-
-        let mailBox = document.querySelector('.mail')
-        let boxmail = document.querySelector('.boxMail')
-        var close = document.querySelector('.fa-xmark')
-        mailBox.onclick = function(){
-            mailBox.classList.toggle('active')
-            boxmail.classList.add('active')
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        close.addEventListener('click', function(){
-            boxmail.classList.remove('active')
-        })
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
 
-          const images = [
-        "./publics/images/pl1.jpg",
-        "./publics/images/pl.jpg",
-        "./publics/images/pl3.jpg",
-        "./publics/images/pl4.jpg",
-        "./publics/images/pl5.jpg"
-    ];
+        body {
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    #fff5fb 0%,
+                    #ffd6e9 35%,
+                    #ff9fc8 70%,
+                    #ff75ad 100%
+                );
 
-    let currentIndex = 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-    const slideImage = document.getElementById("cuteSlide");
+            position: relative;
+        }
 
-    setInterval(function () {
-        slideImage.style.opacity = "0";
+        /* =========================
+           BACKGROUND HEARTS
+        ========================= */
 
-        setTimeout(function () {
-            currentIndex++;
+        .heart {
+            position: absolute;
+            bottom: -50px;
 
-            if (currentIndex >= images.length) {
-                currentIndex = 0;
+            color: rgba(255, 255, 255, 0.75);
+
+            font-size: 20px;
+
+            animation: heartFloat linear infinite;
+
+            pointer-events: none;
+        }
+
+        @keyframes heartFloat {
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg)
+                    scale(0.8);
+
+                opacity: 0;
             }
 
-            slideImage.src = images[currentIndex];
+            15% {
+                opacity: 1;
+            }
 
-            slideImage.style.opacity = "1";
-        }, 500);
+            100% {
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg)
+                    scale(1.4);
 
-    }, 3000);
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .welcome {
+            width: min(92%, 550px);
+
+            text-align: center;
+
+            position: relative;
+            z-index: 10;
+
+            animation: welcomeShow 1.2s ease;
+        }
+
+        @keyframes welcomeShow {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* =========================
+           TOP TEXT
+        ========================= */
+
+        .small-title {
+            color: #ffffff;
+
+            font-size: 18px;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 12px;
+
+            text-shadow:
+                0 3px 10px rgba(180, 40, 100, 0.25);
+        }
+
+        .main-title {
+            color: #ffffff;
+
+            font-size: clamp(38px, 9vw, 70px);
+
+            font-weight: 900;
+
+            line-height: 1;
+
+            text-shadow:
+                0 5px 0 #ff6da8,
+                0 8px 20px rgba(180, 40, 100, 0.25);
+
+            margin-bottom: 15px;
+        }
+
+        .name {
+            color: #fff;
+
+            font-size: clamp(25px, 6vw, 40px);
+
+            font-weight: bold;
+
+            margin-bottom: 35px;
+
+            text-shadow:
+                0 3px 10px rgba(180, 40, 100, 0.3);
+        }
+
+        /* =========================
+           GIFT
+        ========================= */
+
+        .gift-area {
+            position: relative;
+
+            width: 190px;
+            height: 180px;
+
+            margin: 0 auto 30px;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .gift-area:hover {
+            transform: scale(1.08);
+        }
+
+        .gift-box {
+            position: absolute;
+
+            left: 20px;
+            bottom: 0;
+
+            width: 150px;
+            height: 110px;
+
+            background: linear-gradient(
+                135deg,
+                #ff4f91,
+                #ff78ad
+            );
+
+            border-radius: 8px 8px 15px 15px;
+
+            box-shadow:
+                0 15px 30px rgba(190, 40, 100, 0.25);
+        }
+
+        .gift-box::before {
+            content: "";
+
+            position: absolute;
+
+            left: 62px;
+            top: 0;
+
+            width: 25px;
+            height: 110px;
+
+            background: #ffd34d;
+        }
+
+        .gift-box::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 40px;
+
+            width: 150px;
+            height: 24px;
+
+            background: #ffd34d;
+        }
+
+        .gift-lid {
+            position: absolute;
+
+            left: 10px;
+            top: 35px;
+
+            width: 170px;
+            height: 35px;
+
+            background: #ff3f88;
+
+            border-radius: 8px;
+
+            z-index: 3;
+
+            box-shadow:
+                0 5px 10px rgba(190, 40, 100, 0.2);
+        }
+
+        /* =========================
+           BOW
+        ========================= */
+
+        .bow {
+            position: absolute;
+
+            left: 68px;
+            top: 0;
+
+            width: 55px;
+            height: 45px;
+
+            z-index: 5;
+        }
+
+        .bow-left,
+        .bow-right {
+            position: absolute;
+
+            width: 34px;
+            height: 34px;
+
+            background: #ffd34d;
+
+            border-radius: 50% 50% 10% 50%;
+        }
+
+        .bow-left {
+            left: 0;
+            transform: rotate(-35deg);
+        }
+
+        .bow-right {
+            right: 0;
+            transform: rotate(35deg);
+        }
+
+        .bow-center {
+            position: absolute;
+
+            left: 20px;
+            top: 10px;
+
+            width: 18px;
+            height: 25px;
+
+            background: #ffbf24;
+
+            border-radius: 50%;
+
+            z-index: 2;
+        }
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .open-text {
+            color: #ffffff;
+
+            font-size: 18px;
+
+            margin-bottom: 18px;
+
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.06);
+            }
+        }
+
+        .open-button {
+            border: none;
+
+            background: #ffffff;
+
+            color: #ff4f91;
+
+            padding: 16px 35px;
+
+            border-radius: 50px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 30px rgba(180, 40, 100, 0.25);
+
+            transition: 0.3s ease;
+        }
+
+        .open-button:hover {
+            transform: translateY(-3px) scale(1.05);
+
+            box-shadow:
+                0 15px 35px rgba(180, 40, 100, 0.3);
+        }
+
+        /* =========================
+           SPARKLES
+        ========================= */
+
+        .sparkle {
+            position: absolute;
+
+            color: #ffffff;
+
+            font-size: 25px;
+
+            animation: sparkle 2s infinite;
+        }
+
+        .sparkle1 {
+            top: 12%;
+            left: 15%;
+        }
+
+        .sparkle2 {
+            top: 25%;
+            right: 13%;
+
+            animation-delay: 0.5s;
+        }
+
+        .sparkle3 {
+            bottom: 20%;
+            left: 10%;
+
+            animation-delay: 1s;
+        }
+
+        .sparkle4 {
+            bottom: 15%;
+            right: 12%;
+
+            animation-delay: 1.5s;
+        }
+
+        @keyframes sparkle {
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(0.7) rotate(0deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.3) rotate(180deg);
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+            .small-title {
+                font-size: 14px;
+            }
+
+            .name {
+                margin-bottom: 25px;
+            }
+
+            .gift-area {
+                transform: scale(0.9);
+            }
+
+            .gift-area:hover {
+                transform: scale(0.95);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         FLOATING HEARTS
+    ========================= -->
+
+    <span class="heart" style="left: 5%; animation-duration: 7s;">♥</span>
+    <span class="heart" style="left: 15%; animation-duration: 9s; animation-delay: 2s;">♥</span>
+    <span class="heart" style="left: 30%; animation-duration: 8s; animation-delay: 1s;">♥</span>
+    <span class="heart" style="left: 50%; animation-duration: 10s; animation-delay: 3s;">♥</span>
+    <span class="heart" style="left: 70%; animation-duration: 8s; animation-delay: 1s;">♥</span>
+    <span class="heart" style="left: 85%; animation-duration: 9s; animation-delay: 2s;">♥</span>
+    <span class="heart" style="left: 95%; animation-duration: 7s;">♥</span>
+
+
+    <!-- =========================
+         SPARKLES
+    ========================= -->
+
+    <div class="sparkle sparkle1">✦</div>
+    <div class="sparkle sparkle2">✧</div>
+    <div class="sparkle sparkle3">✦</div>
+    <div class="sparkle sparkle4">✧</div>
+
+
+    <!-- =========================
+         WELCOME
+    ========================= -->
+
+    <main class="welcome">
+
+        <div class="small-title">
+            MỘT MÓN QUÀ NHỎ DÀNH CHO
+        </div>
+
+        <h1 class="main-title">
+            HAPPY BIRTHDAY
+        </h1>
+
+        <div class="name">
+            Uyển Đan 🩷
+        </div>
+
+
+        <!-- =========================
+             GIFT
+        ========================= -->
+
+        <div
+            class="gift-area"
+            id="openGift"
+        >
+
+            <div class="bow">
+                <div class="bow-left"></div>
+                <div class="bow-right"></div>
+                <div class="bow-center"></div>
+            </div>
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-box"></div>
+
+        </div>
+
+
+        <div class="open-text">
+            🎁 Có một món quà đang chờ em...
+        </div>
+
+        <button
+            class="open-button"
+            id="openButton"
+        >
+            Mở món quà 💗
+        </button>
+
+    </main>
+
+    <script>
+        const openGift = document.getElementById("openGift");
+        const openButton = document.getElementById("openButton");
+
+
+        function openBirthday() {
+            // Đánh dấu người dùng đã bấm nút
+            sessionStorage.setItem(
+                "birthdayMusic",
+                "play"
+            );
+
+            // Hiệu ứng chuyển trang
+            document.body.style.transition =
+                "opacity 0.8s ease, transform 0.8s ease";
+
+            document.body.style.opacity = "0";
+
+            document.body.style.transform =
+                "scale(1.05)";
+
+            // Chuyển sang trang sinh nhật
+            setTimeout(function () {
+
+                window.location.href =
+                    "./birthday.html";
+
+            }, 800);
+        }
+
+
+        openGift.addEventListener(
+            "click",
+            openBirthday
+        );
+
+
+        openButton.addEventListener(
+            "click",
+            openBirthday
+        );
     </script>
+
+</body>
+
 </html>
